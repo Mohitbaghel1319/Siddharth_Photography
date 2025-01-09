@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(30, 30, 30);
+    color: #fff;
+}
+header{
+    background-image: url('https://images.unsplash.com/photo-1519458246479-6acae7536988?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+main{
+    overflow-x: hidden;
+}
+nav li:hover a{
+    color: rgb(255, 133, 89);
+}
+.contect-btn{
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid orangered;
+}
+.contect-btn::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 0;
+    background-color: orangered;
+    transition: left 0.4s ease-in;
+}
+.contect-btn:hover::after{
+    left: 0;
+}
+.contect-btn a{
+    position: relative;
+    z-index: 99;
+}
+.contect-btn:hover a{
+    color: #fff;
+}
+
+#page1{
+    overflow: hidden;
+}
+#gallary img{
+    transition: all ease-in 0.2s;
+}
+
+#gallary img:hover{
+    transform: scale(1.2);
+}
+#gallery img{
+    transition: all ease-in 0.2s;
+}
+
+#gallery img:hover{
+    transform: scale(1.2);
+}
+
+/* page gallery start */
+.image-div img, .after-img{
+    transition: all ease-in 0.4s;
+}
+.after-img{
+    background-color: rgb(0, 0, 0, 0.6);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-div:hover img{
+    transform: rotate(-5deg) scale(0.8);
+    top:0;
+}
+.image-div:hover div{
+    transform: rotate(-5deg) scale(0.8);
+    top:0;
+    opacity: 1;
+}
+
+.gallery-container{
+    width: 90%;
+    /* height: 100vh; */
+    margin: auto;
+}
+#photo-gallery{
+    display: flex;
+    gap: 10px;
+}
+.clms{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+}
+.photo{
+    overflow: hidden;
+}
+.photo img{
+    width: 100%;
+    border-radius: 1vw;
+    object-fit: cover;
+    transition: all ease-in-out 0.3s;
+}
+.photo img:hover{
+    scale: 0.9;
+}
